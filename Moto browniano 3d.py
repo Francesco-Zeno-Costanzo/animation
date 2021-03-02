@@ -26,7 +26,7 @@ for i in range(0,T):
     y=np.insert(y,len(y),y[i]+b)
     z=np.insert(z,len(z),z[i]+g)
 
-fig = plt.figure()
+fig = plt.figure(1)
 ax = fig.gca(projection='3d')
 plt.grid()
 ax.set_title('Moto browniano 3d', fontsize=20)
@@ -47,8 +47,9 @@ def animate(i):
 
 anim = animation.FuncAnimation(fig, animate, frames=1000, interval=50, blit=True, repeat=False)
 #anim.save('Moto browniano 3d.mp4', fps=30, extra_args=['-vcodec', 'libx264'])
-
-fig1 = plt.figure()
+plt.show()
+##
+fig1 = plt.figure(2)
 ax1 = fig1.gca(projection='3d')
 plt.grid()
 
