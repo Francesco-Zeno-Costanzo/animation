@@ -10,13 +10,11 @@ def fy(t):
 
 T=2*np.pi
 N=5000
-x = np.array([])
-y = np.array([])
+
 t = np.linspace(0,T, N)
 
-
-x = np.append(x, fx(t))
-y = np.append(y, fy(t))
+x = fx(t)
+y = fy(t)
 
 
 fig, ax = plt.subplots()
