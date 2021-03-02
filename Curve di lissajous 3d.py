@@ -14,17 +14,14 @@ def fz(t):
 
 T=2*np.pi
 N=5000
-x = np.array([])
-y = np.array([])
-z = np.array([])
+
 t = np.linspace(0,T, N)
 
+x = fx(t)
+y = fy(t)
+z = fz(t)
 
-x = np.append(x, fx(t))
-y = np.append(y, fy(t))
-z = np.append(z, fz(t))
-
-fig = plt.figure()
+fig = plt.figure(1)
 ax = fig.gca(projection='3d')
 plt.title("Curve di lissajous 3d \n $\omega_x$= %.2f; $\omega_y$= %.2f; $\omega_z$= %.2f" %(o, o1, o2), fontsize=20)
 ax.set_xlim(np.min(x)-0.1,np.max(x)+0.1)
@@ -46,8 +43,9 @@ def animate(i):
 anim = animation.FuncAnimation(fig, animate, frames=N, interval=1, blit=True, repeat=True)
 
 #anim.save('Curve di lissajous 3d .mp4', fps=100, extra_args=['-vcodec', 'libx264'])
-
-fig1 = plt.figure()
+plt.show()
+##
+fig1 = plt.figure(2)
 ax1 = fig1.gca(projection='3d')
 plt.grid()
 
