@@ -36,7 +36,8 @@ def animate(i):
 anim = animation.FuncAnimation(fig, animate, frames=N, interval=1, blit=True, repeat=True)
 
 #anim.save('Curve di lissajous.mp4', fps=30, extra_args=['-vcodec', 'libx264'])
-
+plt.show()
+##
 plt.figure()
 plt.title("Curve di lissajous $\omega_x$= %.2f; $\omega_y$= %.2f" %(o,o1), fontsize=20)
 plt.xlabel('X(t)')
