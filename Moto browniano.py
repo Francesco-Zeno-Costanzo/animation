@@ -20,7 +20,7 @@ for i in range(0,T):
     x=np.insert(x,len(x),x[i]+r)
     y=np.insert(y,len(y),y[i]+b)
 
-fig, ax = plt.subplots()
+fig, ax = plt.subplots(1)
 plt.title("Moto browniano", fontsize=20)
 ax.set_xlim(np.min(x),np.max(x))
 ax.set_ylim(np.min(y),np.max(y))
@@ -38,8 +38,9 @@ def animate(i):
 
 anim = animation.FuncAnimation(fig, animate, frames=range(0, T), interval=5, blit=True, repeat=False)
 #anim.save('Moto browniano.mp4', fps=30, extra_args=['-vcodec', 'libx264'])
-
-plt.figure()
+plt.show()
+##
+plt.figure(2)
 plt.title("Moto browniano" , fontsize=20)
 plt.xlabel('X(t)')
 plt.ylabel('Y(t)')
