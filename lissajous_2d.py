@@ -24,7 +24,7 @@ y = np.sin(o2*t)
 #=======================================================
 
 fig, ax = plt.subplots(1)
-plt.title("Curve di lissajous $\omega_x$= %.2f; $\omega_y$= %.2f" %(o,o1), fontsize=20)
+plt.title("Curve di lissajous $\omega_x$= %.2f; $\omega_y$= %.2f" %(o1,o2), fontsize=20)
 ax.set_xlim(np.min(x)-0.1,np.max(x)+0.1)
 ax.set_ylim(np.min(y)-0.1,np.max(y)+0.1)
 ax.set_xlabel('X(t)')
@@ -49,7 +49,7 @@ plt.show()
 #=======================================================
 
 plt.figure(2)
-plt.title("Curve di lissajous $\omega_x$= %.2f; $\omega_y$= %.2f" %(o,o1), fontsize=20)
+plt.title("Curve di lissajous $\omega_x$= %.2f; $\omega_y$= %.2f" %(o1,o2), fontsize=20)
 plt.xlabel('X(t)')
 plt.ylabel('Y(t)')
 plt.grid()
